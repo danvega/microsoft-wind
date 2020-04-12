@@ -12,7 +12,7 @@
   <div class="container mx-auto py-4 bg-white">
     <nav class="flex items-center justify-between h-60px p4 text-sm">
       <img src="img/logo.png" alt="Microsoft" class="h-6" />
-      <ul class="flex flex-1 ml-4">
+      <ul id="nav-items" class="hidden sm:flex flex-1 ml-4">
         <li class="pl-6"><a href="#" class="hover:underline">Office</a></li>
         <li class="pl-6"><a href="#" class="hover:underline">Windows</a></li>
         <li class="pl-6"><a href="#" class="hover:underline">Surface</a></li>
@@ -20,7 +20,7 @@
         <li class="pl-6"><a href="#" class="hover:underline">Deals</a></li>
         <li class="pl-6"><a href="#" class="hover:underline">Support</a></li>
       </ul>
-      <ul class="flex">
+      <ul class="hidden sm:flex">
         <li class="pr-4">
           <a href="#"><i class="fas fa-search"></i></a>
         </li>
@@ -28,6 +28,9 @@
           <a href="#"><i class="fas fa-shopping-cart"></i></a>
         </li>
       </ul>
+      <div id="hamburger" class="sm:hidden cursor-pointer">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
 
     <header class="w-full h-400 mt-5 flex flex-col justify-center pl-10"
@@ -41,7 +44,7 @@
       </a>
     </header>
 
-    <section class="grid grid-cols-4 gap-6 mt-4">
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
       <div>
         <img src="img/card1.webp" alt="" class="w-full" />
         <h3 class="text-xl font-bold mt-4">New Surface Pro 7</h3>
@@ -88,7 +91,7 @@
       </div>
     </section>
 
-    <section class="grid grid-cols-4 gap-6 mt-4">
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
       <div>
         <img src="img/cards_2_1.webp" alt="" class="w-full" />
         <h3 class="text-xl font-bold mt-4">Office 365 for Business</h3>
@@ -221,7 +224,7 @@
       <div class="flex items-center">
         <i class="fas fa-globe fa-2x pr-4"></i> English (United States)
       </div>
-      <ul class="flex items-center justify-between">
+      <ul class="flex items-center justify-between text-xs">
         <li class="pr-4"><a href="#">Sitemap</a></li>
         <li class="pr-4"><a href="#">Contact Microsoft</a></li>
         <li class="pr-4"><a href="#">Privacy & cookies</a></li>
@@ -234,5 +237,11 @@
     </div>
   </footer>
 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+      document.getElementById('nav-items').classList.toggle("hidden");
+    })
+  </script>
 </body>
 </html>
