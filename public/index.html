@@ -10,15 +10,17 @@
 </head>
 <body class="">
   <div class="container mx-auto py-4 bg-white">
-    <nav class="flex items-center justify-between h-60px p4 text-sm">
-      <img src="img/logo.png" alt="Microsoft" class="h-6" />
-      <ul id="nav-items" class="hidden sm:flex flex-1 ml-4">
-        <li class="pl-6"><a href="#" class="hover:underline">Office</a></li>
-        <li class="pl-6"><a href="#" class="hover:underline">Windows</a></li>
-        <li class="pl-6"><a href="#" class="hover:underline">Surface</a></li>
-        <li class="pl-6"><a href="#" class="hover:underline">Xbox</a></li>
-        <li class="pl-6"><a href="#" class="hover:underline">Deals</a></li>
-        <li class="pl-6"><a href="#" class="hover:underline">Support</a></li>
+    <nav class="relative sm:flex items-center h-60px p4 text-sm">
+      <div class="mb-4 sm:mb-0">
+        <img src="img/logo.png" alt="Microsoft" class="h-6" />
+      </div>
+      <ul id="nav-items" class="hidden sm:flex flex-1 ml-1 sm:ml-4">
+        <li class="pb-2 sm:pl-6 sm:pb-0"><a href="#" class="hover:underline">Office</a></li>
+        <li class="pb-2 sm:pl-6 sm:pb-0"><a href="#" class="hover:underline">Windows</a></li>
+        <li class="pb-2 sm:pl-6 sm:pb-0"><a href="#" class="hover:underline">Surface</a></li>
+        <li class="pb-2 sm:pl-6 sm:pb-0"><a href="#" class="hover:underline">Xbox</a></li>
+        <li class="pb-2 sm:pl-6 sm:pb-0"><a href="#" class="hover:underline">Deals</a></li>
+        <li class="pb-2 sm:pl-6 sm:pb-0"><a href="#" class="hover:underline">Support</a></li>
       </ul>
       <ul class="hidden sm:flex">
         <li class="pr-4">
@@ -28,7 +30,7 @@
           <a href="#"><i class="fas fa-shopping-cart"></i></a>
         </li>
       </ul>
-      <div id="hamburger" class="sm:hidden cursor-pointer">
+      <div id="hamburger" class="absolute right-0 top-0 sm:hidden cursor-pointer">
         <i class="fas fa-bars"></i>
       </div>
     </nav>
